@@ -3,8 +3,6 @@ plugins {
   id 'application'
 }
 
-def artopPlugins = 'C:/tools/artop-demo-4.15.2-win32_64/plugins'
-
 dependencies {
     implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.artop.aal.common_4.15.2.202209150719.jar')
     implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.sphinx.emf_0.12.0.202112070821.jar')
