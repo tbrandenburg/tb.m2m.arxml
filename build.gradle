@@ -1,0 +1,67 @@
+plugins {
+  id 'java'
+  id 'application'
+}
+
+def artopPlugins = 'C:/tools/artop-demo-4.15.2-win32_64/plugins'
+
+dependencies {
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.artop.aal.common_4.15.2.202209150719.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.sphinx.emf_0.12.0.202112070821.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.core.expressions_3.6.800.v20200319-0911.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.core.filesystem_1.7.700.v20200110-1734.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.emf.ecore.xmi_2.16.0.v20190528-0725.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.emf.ecore_2.27.0.v20220426-0617.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.emf.common_2.25.0.v20220616-0914.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.emf.workspace_1.5.1.201805140824.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.core.runtime_3.18.0.v20200506-2143.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.osgi_3.15.300.v20200520-1959.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.osgi.compatibility.state_1.1.800.v20200511-1223.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.equinox.common_3.12.0.v20200504-1602.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.core.jobs_3.10.800.v20200421-0950.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.equinox.registry_3.8.800.v20200406-0956.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.equinox.preferences_3.8.0.v20200422-1833.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.core.contenttype_3.7.700.v20200517-1644.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.equinox.app_1.4.500.v20200422-1833.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.core.resources_3.13.700.v20200209-1624.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.core.commands_3.9.700.v20191217-1850.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.emf.transaction_1.9.1.201805140824.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.emf.edit_2.17.0.v20220201-1551.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.emf.ecore.change_2.14.0.v20190528-0725.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.emf.validation_1.8.0.202008210805.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.eclipse.sphinx.platform_0.12.0.202112070821.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.apache.commons.cli_1.4.0.v20200417-1444.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.apache.xerces_2.9.0.v201101211617.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/javax.xml_1.3.4.v201005080400.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.apache.xml.resolver_1.2.0.v201005080400.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.artop.eel.common_1.1.0.201706291244.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.artop.aal.gautosar_4.15.2.202209150719.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/javax.activation_1.1.0.v201211130549.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.artop.aal.autosar40_4.15.2.202209150719.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.artop.aal.autosar450_4.15.2.202209150719.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.artop.aal.serialization_4.15.2.202209150719.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.artop.eel.serialization_1.1.0.201706291244.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.artop.aal.autosar21_4.15.2.202209150719.jar')
+    implementation files('C:/tools/artop-demo-4.15.2-win32_64/plugins/org.artop.aal.autosar215_4.15.2.202209150719.jar')
+}
+
+jar {
+
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+  
+  manifest {
+    attributes(
+      'Class-Path': configurations.compileClasspath.collect { it.getName() }.join(' '),
+      'Main-Class': 'tb.m2m.arxml.ARXMLReader'
+    )
+  }
+  from {
+    configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+  } {
+        exclude "META-INF/*.SF"
+        exclude "META-INF/*.DSA"
+        exclude "META-INF/*.RSA"
+    }
+}
+
+mainClassName = 'tb.m2m.arxml.ARXMLReader'
